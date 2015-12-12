@@ -149,16 +149,10 @@ public class VowelsRUsJavaSubset {
 		boolean lastIsVowel = isVowel(last);
 		boolean	penultimateIsVowel = isVowel(penultimate);
 		
-		// Two vowels
-		if (lastIsVowel && penultimateIsVowel) {
-			return true;
-		}
-		// Two consonants
-		if (!lastIsVowel && !penultimateIsVowel) {
-			return true;
-		}
-		// Not two of either
-		return false;
+		// If both are true or both are false return true, otherwise false
+		// Whoops idk if this ^ is in the subset...
+		// But you love boolean math right?!
+		return !(lastIsVowel ^ penultimateIsVowel);
 	}
 
 	// Checks if the letter given is one of the
